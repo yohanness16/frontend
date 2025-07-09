@@ -1,0 +1,81 @@
+body {
+  background-color: #f0f2f5; 
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+ 
+  margin: 40px auto;
+   padding: 1.5rem;
+  background-color: #f8f9fa; 
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.container h1 {
+  text-align: center;
+  color: #007bff; 
+  margin-bottom: 30px;
+}
+
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #212529; /
+}
+
+
+.title-input {
+  width: 100%;
+  padding: 12px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  outline-color: #0056b3; /* accent blue */
+}
+
+
+input[type="file"] {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  resize: vertical;
+  min-height: 150px;
+  margin-bottom: 30px;
+  outline-color: #0056b3;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+button[type="submit"] {
+    display: flex;
+    justify-content: center;
+  max-width: 40%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}

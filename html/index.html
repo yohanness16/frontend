@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Layout</title>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <svg style="display: none;">
+    <symbol id="icon-like" viewBox="0 0 16 16">
+      <path d="M8 1C5.243 1 3 3.243 3 6c0 2.036 1.193 3.833 2.908 4.537L8 15l2.092-4.463C11.807 9.834 13 8.037 13 6c0-2.757-2.243-5-5-5z"/>
+    </symbol>
+    <symbol id="icon-dislike" viewBox="0 0 16 16">
+      <path d="M8 15c2.757 0 5-2.243 5-5 0-2.036-1.193-3.833-2.908-4.537L8 1l-2.092 4.463C4.193 6.166 3 7.963 3 10c0 2.757 2.243 5 5 5z"/>
+    </symbol>
+    <symbol id="icon-comment" viewBox="0 0 16 16">
+      <path d="M8 0a8 8 0 1 0 7.546 4.796.5.5 0 0 0-.597-.482A7 7 0 1 1 1 8c0 1.7.58 3.265 1.54 4.497L.1 14.9a.5.5 0 0 0 .638.765l3.5-2.5A7.002 7.002 0 0 0 8 0z"/>
+    </symbol>
+  </svg>
+</head>
+<body>
+  <div class="navbar-container">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="blog_logo.png" alt="" />
+        <li class="auth-username hidden">Welcome, <span id="username-display"></span>!</li>
+      </div>
+      <button class="menu-toggle">☰</button>
+      <ul class="nav-links">
+       
+        <li class="auth-links hidden"><a href="create-post.html">New Post</a></li>
+        
+
+        <li><a href="#">Home</a></li>
+
+
+        <li class="auth-links hidden"><a href="#" id="logout-btn">Logout</a></li>
+        <li class="no-auth-links"><a href="auth.html">Login/Signup</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header-container">
+    <div class="header">
+      <h1>blog</h1>
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input" />
+        <button class="search-button">
+          <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20">
+            <path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="topics-section">
+    <div class="topic-container">
+      <div class="topic-card topic-left">
+        <h2>popular topics</h2>
+        <div class="topic-section">
+          <h3>Cheeky Monkeys</h3>
+          <p>How monkeys prank each other in the jungle</p>
+        </div>
+        <div class="topic-section">
+          <h3>Sneaky Cats</h3>
+          <p>Cat escapades that will make you laugh out loud</p>
+        </div>
+        <div class="topic-section">
+          <h3>Playful Parrots</h3>
+          <p>Talking birds and their hilarious antics</p>
+        </div>
+      </div>
+
+      <div class="topic-card topic-center">
+        <h2>Donkey Diaries</h2>
+        <p>Follow the adventures of Chebude, the silliest donkey in Addis Ababa</p>
+        <button class="learn-btn">Read Chebude's Story</button>
+      </div>
+
+      <div class="topic-card topic-right">
+        <h2>latest topics s</h2>
+        <div class="topic-section">
+          <h3>Goofy Goats</h3>
+          <p>Unexpected goat moments caught on camera</p>
+        </div>
+        <div class="topic-section">
+          <h3>Silly Squirrels</h3>
+          <p>How squirrels steal snacks and cause chaos</p>
+        </div>
+        <div class="topic-section">
+          <h3>Funny Frogs</h3>
+          <p>Jumping into trouble in the pond</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-container" id="blog-container" data-posts>
+    
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h4>About Us</h4>
+        <p>Sharing funny animal stories and joyful moments.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">facebook</a>
+          <a href="#" aria-label="Twitter">twitwe</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Funny Animal legends. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/post.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>

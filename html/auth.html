@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div id="container" class="container">
+    <div class="row">
+        <div class="col align-items-center flex-col sign-up">
+            <div class="form-wrapper align-items-center">
+                <div class="form sign-up">
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bx-mail-send'></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="Confirm password">
+                    </div>
+                    <button class="auth-btn">
+                        Sign up
+                    </button>
+                    <p class="auth-text">
+                        <span class="auth-message">
+                            Already have an account?
+                        </span>
+                        <button onclick="toggle()" class="auth-link pointer">
+                            Sign in here
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col align-items-center flex-col sign-in">
+            <div class="form-wrapper align-items-center">
+                <div class="form sign-in">
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <button class="auth-btn">
+                        Sign in
+                    </button>
+                    <p class="auth-text">
+                        <button class="auth-link">
+                            Forgot password?
+                        </button>
+                    </p>
+                    <p class="auth-text">
+                        <span class="auth-message">
+                            Don't have an account?
+                        </span>
+                        <button onclick="toggle()" class="auth-link pointer">
+                            Sign up here
+                        </button>
+                    </p>
+                </div>
+            </div>
+            <div class="form-wrapper"></div>
+        </div>
+    </div>
+    <div class="row content-row">
+        <div class="col align-items-center flex-col">
+            <div class="text sign-in">
+                <h2 class="auth-heading">
+                    Welcome
+                </h2>
+            </div>
+            <div class="img sign-in"></div>
+        </div>
+        <div class="col align-items-center flex-col">
+            <div class="img sign-up"></div>
+            <div class="text sign-up">
+                <h2 class="auth-heading">
+                    Join with us
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let container = document.getElementById('container')
+
+toggle = () => {
+	container.classList.toggle('sign-in')
+	container.classList.toggle('sign-up')
+}
+
+setTimeout(() => {
+	container.classList.add('sign-in')
+}, 200)
+</script>
+<script src="/js/auth.js"></script>
+</body>
+</html>
